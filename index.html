@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class = menu>
+        </div>
     <div class=header> 
         <div class="containernav">
             <div class="nav">
@@ -14,10 +16,10 @@
                 <label for="menu-toggle" id="menu-icon"></label>
                 <div class="linknav">
                     <ul>
-                        <li>Maison 1</li>
-                        <li>Maison 2</li>
-                        <li>Maison 3</li>
-                        <li>Maison 4</li>
+                        <li><a href="maison1.html">Refuge Scandinave</a></li>                       
+                        <li><a href="maison2.html">Nordique élégence</a></li>
+                        <li><a href="maison3.html">Havre de paix</a></li>
+                        <li><a href="maison4.html">Design épuré</a></li>
                     </ul>
                 </div>
                 <div class="reseaux">
@@ -34,35 +36,27 @@
             </div>
         </div>
         <div class="hero">
-            <h1>VATANEN</h1>
+            <h1><a href="index.html">VATANEN</a></h1>
             <div class="intro">
                 <h2>NOUS CONSTRUISONS DE <br> VRAIS MAISONS SCANDINAVES</h2>
                 <div class="bncontainer">
-					<a href="#" class="boutonplus">Voir plus</a>
+					<a href="#section-maison" class="boutonplus">Voir plus</a>
                 </div>
             </div>
             <div class="barrebasse">
-                <!--<div class="coordonee">
-                    <p>20/22 Rue Galilée, 38400 Saint-Martin-d'Hères</p>
-                    <p>Vatanen@gmail.com</p>
-                    <p>+33 12 34 56 78</p>
-                </div>-->
                 <div class="coordonee">
-                    <!-- Adresse renvoyant à Google Maps -->
                     <p>
                         <a href="https://www.google.com/maps/search/?api=1&query=20/22+Rue+Galilée,+38400+Saint-Martin-d'Hères" target="_blank" style="text-decoration: none;">
                             20/22 Rue Galilée, 38400 Saint-Martin-d'Hères
                         </a>
                     </p>
                 
-                    <!-- Lien mail pour ouvrir un client mail -->
                     <p>
                         <a href="mailto:Vatanen@gmail.com" style=" text-decoration: none;">
                             vatanen@gmail.com
                         </a>
                     </p>
                 
-                    <!-- Lien téléphone pour appeler -->
                     <p>
                         <a href="tel:+3312345678" style=" text-decoration: none;">
                             +33 12 34 56 78
@@ -85,10 +79,6 @@
             <h4 id="apropos">A PROPOS</h4>
             <p class="text">VATANEN est une entreprise de construction présente sur le marché depuis 15ans, la société construit des maisons exclusive dans le style scandinave</p>
             <p class="text">Le client développe son projet avec l'aide d'un architect personnel suédois</p>
-            <!--<video controls class="presentation">
-                <source src="video/videopresentation.mp4" type="video/mp4">
-                <a href="video/videopresentation.mp4">Regarder la vidéo > </a>
-            </video> -->
             <a class="presentation" href="video/videopresentation.mp4">Regarder la vidéo > </a>
         </div>
         <div class="bloc2">
@@ -118,12 +108,12 @@
     </div>
     
     
-    <div class="maison">
-        <div class="maison1">
+    <div class="maison" id="section-maison">
+        <a href="maison1.html" class="maison1">
             <div class="overlay"></div>
             <h2 class="home">01</h2>
             <h3 class="bluesky">THE BLUE SKY HOME</h3>
-            <P>Refuge Scandinave</P>
+            <p>Refuge Scandinave</p>
             <img src="./img/MaisonScandinave.jpeg" alt="Maison Scandinave - Refuge Scandinave">
             <div class="search-icon-container">
                 <div class="outer-circle">
@@ -132,8 +122,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="maison2">
+        </a>
+        <a href="maison2.html" class="maison2">
             <div class="overlay"></div>
             <h2 class="home">02</h2>
             <h3 class="bluesky">THE BLUE SKY HOME</h3>
@@ -146,8 +136,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="maison3">
+        </a>
+        <a href="maison3.html" class="maison3">
             <div class="overlay"></div>
             <h2 class="home">03</h2>
             <h3 class="bluesky">THE BLUE SKY HOME</h3>
@@ -160,8 +150,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="maison4">
+        </a>
+        <a href="maison4.html" class="maison4">
             <div class="overlay"></div>
             <h2 class="home">04</h2>
             <h3 class="bluesky">THE BLUE SKY HOME</h3>
@@ -174,14 +164,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="fin">
         <h2 class="h2">RESTEZ CONNECTE</h2>
         <div class="form">
             <div class="formulaire">
-                <form action="submit_form.php" method="POST"> <!-- Changez l'action selon votre besoin -->
+                <form action="submit_form.php" method="POST"> 
                     <input type="text" id="name" name="name" required placeholder="Nom" >
         
                     <div class="input-row">
@@ -197,20 +187,38 @@
         
             <div class="contacte">
                 <div class="numtel">
-                    <p>+33 12 34 56 78</p>
-                    <p>+33 87 65 43 21</p>
+                    <p>
+                        <a href="tel:+3312345678" style=" text-decoration: none; ">
+                            +33 12 34 56 78
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+3387654321" style=" text-decoration: none;">
+                            +33 87 65 43 21
+                        </a>
+                    </p>
                 </div>
                 <div class="email">
-                    <p>vatanen@gmail.com</p>
-                    <p>info.vatanen@gmail.com</p>
+                    <p>
+                        <a href="mailto:Vatanen@gmail.com" style=" text-decoration: none;">
+                            vatanen@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:info.vatanen@gmail.com" style=" text-decoration: none;">
+                            info.vatanen@gmail.com
+                        </a>
+                    </p>
                 </div>
                 <div class="adress">
-                    <p>20/22 Rue Galilée, 38400 Saint-Martin-d'Hères</p>
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=20/22+Rue+Galilée,+38400+Saint-Martin-d'Hères" target="_blank" style="text-decoration: none; ">
+                            20/22 Rue Galilée, 38400 Saint-Martin-d'Hères
+                        </a>
+                    </p>                
                 </div>
+
                 <div class="icon">
-                    <!--<img src="./icone/twitter.png" href="https://x.com/?lang=fr" alt="Twitter">
-                    <img src="./icone/instagram.png" href="https://www.instagram.com/" alt="Instagram">
-                    <img src="./icone/facebook.png" href="https://www.facebook.com/?locale=fr_FR" alt="Facebook">-->
                     <a href="https://twitter.com/?lang=fr" target="_blank">
                         <img src="./icone/twitter.png" alt="Twitter">
                     </a>
