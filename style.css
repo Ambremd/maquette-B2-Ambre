@@ -1,0 +1,892 @@
+@font-face{
+	font-family: "RobotoB";
+	src: url("./fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face{
+	font-family: "RobotoL";
+	src: url("./fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face{
+	font-family: "RobotoR";
+	src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body{
+	font-family: RobotoR;
+	margin: 0;
+  background-color: black;
+  color: white;
+}
+
+h1, h2, h3, h4{
+  font-family: "RobotoB";
+}
+
+
+/*             header            header            header             */
+
+
+/* Bloque pour menu et hero */
+.header {
+    display: flex;
+    height: 100vh;
+    max-height: 1000px;
+    background: url('./img/MaisonScandinave.jpeg') no-repeat center center/cover;
+}
+
+/* Nav Section */
+.containernav {
+    width: 10%; 
+    background-color: black;
+    padding: 20px 0;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Burger menu */
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    color: white;
+    top: 10px;
+    left: 10px;
+}
+
+#menu-icon:after {
+    content: "☰";
+    top: 0;
+    left: 0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* boutton fermeture burger menu */
+#menu-toggle:checked + label#menu-icon:after {
+    content: "✖"; 
+}
+
+/* lien menu*/
+.linknav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.linknav ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 50px;
+}
+
+.linknav li {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+
+.linknav li:hover {
+    background-color: #5f5e5e;
+    cursor: pointer;
+}
+
+#menu-toggle:checked + label + .linknav {
+    left: 0;
+}
+
+/* lien média */
+.reseaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.reseaux ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-top: 30%;
+    padding: 0;
+}
+
+.reseaux ul li a{
+    color: #A5A4A4;
+    padding: 15px 0;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.reseaux ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Langue Section */
+.langue {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.langue p {
+  margin: 0 10px; 
+  color: #A5A4A4;
+}
+.langue :hover {
+  color: white;
+}
+
+
+
+/* Hero  */
+.hero {
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 0% 0 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.hero h1 {
+    font-size: 4rem;
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    margin: 0;
+    font-size: 25px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 5px;
+}
+
+.boutonplus {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #d1a559;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px; 
+}
+
+.boutonplus:hover {
+    background-color: #e0c48c; 
+    color: #333;
+}
+
+/* Barrebasse Section */
+.barrebasse {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: black; 
+  height: 10%; 
+  padding: 0 0px; 
+  width: 100%;
+  color: #A5A4A4;
+  margin-top: 30vh;
+}
+.barrebasse :hover {
+  color: white;
+}
+
+/* Coordinates Section */
+.coordonee {
+  display: flex; 
+  justify-content: flex-start; 
+  margin-top: 0; 
+  cursor: pointer;
+  padding-left: 3%;
+  font-size: 12px;
+}
+
+.coordonee p a {
+  margin-right: 20px; 
+  color: #A5A4A4
+}
+
+.coordonee p a :hover{
+  margin-right: 20px; 
+  color: white 
+}
+
+
+/* Scrolling Section */
+.defilement {
+  display: flex; 
+  align-items: center; 
+  padding-right: 3%;
+}
+
+.arrow {
+  cursor: pointer; 
+  font-size: 24px;
+  color: #A5A4A4;
+}
+
+/* Counter */
+.counter {
+  margin-left: 10px;
+  color: #A5A4A4; 
+}
+
+.un{
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .header{
+    max-height: 800px;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+  .boutonplus {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+  }
+
+  .langue {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align in column */
+  }
+
+  .langue p {
+      margin: 5px 0; /* Adds vertical margin */
+      font-size: 16px;
+  }
+
+  .coordonee {
+    flex-direction: column;
+    margin: 1px;
+  }
+
+  .coordonee p {
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  .barrebasse{
+    height: auto;
+  }
+
+  .un{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header{
+    max-height: 500px;
+  }
+  .intro h2 {
+    font-size: 1.0rem;
+  }
+  .boutonplus {
+    padding: 4px 10px;
+    font-size: 0.6rem;
+    border-radius: 10px;
+  }
+  .reseaux ul li{
+    font-size: 12px;
+  }
+  .langue{
+    font-size: 12px;
+  }
+  .un{
+    font-size: 16px;
+  }
+}
+
+
+/*             info            info            info                 */           
+
+
+.information{
+  height: fit-content;
+  width: 90%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.bloc1{
+ width: 43%;
+ box-sizing: border-box;
+ height: auto;
+ margin: 3%;
+}
+
+.chiffre{
+  color: #d1a559;
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.apropos{
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+#apropos{
+  color: #232323;
+  font-size: 54px;
+  position: relative;
+  z-index: -1;
+  top: -40px;
+  left: 30px;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.text{
+  width: 90%;
+  margin: -5% 5% 10% 5%;
+  font-size: 1.2rem;
+
+}
+
+/*.présentation{
+  color: white;
+}*/
+
+.presentation:hover {
+  color: #d1a559;
+  text-decoration: underline; 
+}
+
+a:-webkit-any-link {
+  color: antiquewhite;
+}
+
+.bloc2{
+  width: 44%;
+  height: auto;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.interieur{
+  margin: auto;
+	padding: 20px 4px;
+	width: 100%;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .chiffre, .apropos{
+    font-size: 1.4em;
+  } 
+  
+  .text{
+    font-size: 1em;
+  }
+
+  #apropos{
+    font-size: 48px;
+  }
+ 
+}
+
+@media screen and (max-width: 650px) {
+  .information{
+    height: auto;
+    width: 100%;
+    max-height: 1000px;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
+
+  .bloc1{
+    width: 90%;
+  }
+
+  .bloc2{
+    width: 90%;
+  }
+
+
+}
+
+/*             bloc3            bloc3            bloc3             */
+
+
+.bloc3{
+  height: auto;
+  width: 90%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  max-height: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  padding: 0px 0 0 3%;
+}
+
+.parti1, .parti2, .parti3, .parti4{
+  display: flex;
+  align-items: center; 
+  flex-basis: 23%; 
+  margin-bottom: 10px;
+}
+
+.nombre{
+  font-size: 35px;
+  font-family: "RobotoB";
+  margin-right: 5%;
+}
+
+.titre{
+  font-size: 18px;
+  word-wrap: break-word; 
+  max-width: 100%; 
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .nombre{
+    font-size: 35px;
+  }
+
+  .titre{
+    font-size: 15px;
+  }
+ 
+}
+
+@media screen and (max-width: 620px) {
+  .bloc3{
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*margin: 0px 0 0 3%;*/
+    justify-content: center; 
+    align-items: center;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .parti1, .parti2, .parti3, .parti4{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    /*flex-basis: 23%; */
+    margin-bottom: 10px;
+    /*width: 100%;*/
+    padding-left: 5%;
+  }
+
+  .nombre{
+    margin-right: 2%;
+    margin-top: 10%;
+  }
+  .titre{
+  width: 100%;
+  box-sizing: border-box;
+  }
+}
+
+/*             Maison            Maison            Maison             */
+
+.maison{
+ height: 80vh;
+ width: 100%;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: row;
+ margin-top: 20px;
+}
+
+.maison1, .maison2, .maison3, .maison4{
+ width: 25%;
+ position: relative;
+ overflow: hidden;
+}
+
+.maison1:hover, .maison2:hover, .maison3:hover, .maison4:hover {
+  transform: scale(1.02);
+  z-index: 5;
+}
+.maison4:hover{
+  margin-right: 4px;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 0; 
+}
+
+.home{
+  color: #d1a559;
+  margin: 0;
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.home, .bluesky {
+  position: absolute;
+  left: 10px; 
+  z-index: 10; 
+}
+
+.bluesky{
+  margin: 0;
+  font-size: 1rem;
+  margin-top: 45px;
+}
+
+.maison p {
+  padding: 15px 0;
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+}
+
+.maison img{
+  margin: auto;
+	width: 100%;
+  height: 100%;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  object-fit: cover;
+  display: block;
+}
+
+/*recherche*/
+
+.search-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 8;
+}
+
+.outer-circle {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background-color: rgba(173, 173, 173, 0.663); 
+  opacity: 50%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative; 
+  z-index:-1;
+}
+
+.inner-circle {
+  width: 70px; 
+  height: 70px; 
+  border-radius: 50%; 
+  background-color: rgb(255, 255, 255); 
+  opacity: 70%;
+  position: absolute; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.search-icon {
+  width: 30px; 
+  height: auto; 
+}
+
+.maison:hover .search-icon-container {
+  opacity: 1; 
+}
+
+.maison1:hover .search-icon-container, 
+.maison2:hover .search-icon-container, 
+.maison3:hover .search-icon-container, 
+.maison4:hover .search-icon-container {
+  opacity: 1; 
+}
+
+.maison1:not(:hover) .search-icon-container,
+.maison2:not(:hover) .search-icon-container,
+.maison3:not(:hover) .search-icon-container,
+.maison4:not(:hover) .search-icon-container {
+  opacity: 0; 
+}
+
+@media screen and (max-width: 1070px) {
+  .maison{
+    height: 70vh;
+  }
+  .maison4:hover{
+    margin-right: 3px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .maison{
+    height: 70vh;
+  }
+  .maison4:hover{
+    margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .maison{
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .maison {
+    flex-direction: row; 
+    flex-wrap: wrap;
+    height: 70vh;
+  }
+
+  .maison1, .maison2 {
+    width: 50%; 
+    box-sizing: border-box;
+  }
+
+  .maison3, .maison4 {
+    width: 50%; 
+    box-sizing: border-box;
+  }
+  .maison4:hover{
+    margin-right: 0px;
+  }
+}
+
+/*             Formulaire            Formulaire            Formulaire             */
+
+.fin {
+   width: 87%;
+   height: auto;
+   margin: 3%;
+   margin-left: 10%;
+   box-sizing: border-box;
+}
+
+.form{
+  display: flex; 
+  justify-content: space-around;
+  /*padding: 20px;*/
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: center;
+}
+
+.h2 {
+  font-size: 1.5rem; 
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 94%;
+}
+
+.h3 {
+  font-size: 1.2rem; 
+  margin: 20px;
+  width: 94%;
+}
+
+/* Formulaire */
+.formulaire {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding-left: 20px; 
+  border-radius: 8px; 
+  width: 35%; 
+  display: flex;
+  flex-direction: column; 
+  display: flex;
+  
+
+}
+
+input, textarea {
+  background-color: #555; 
+  color: #ebebeb; 
+  border: none; 
+  border-radius: 4px; 
+  padding: 10px;
+  margin-bottom: 10px; 
+  width: 100%; 
+}
+
+.formulaire .input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.formulaire .input-row input {
+  width: 100%;
+}
+
+button {
+  background-color: #d1a559; 
+  color: white; 
+  border: none;
+  border-radius: 4px; 
+  padding: 3%; 
+  cursor: pointer; 
+  width: 100%; 
+}
+
+button:hover {
+  background-color: #c59f4c; 
+}
+
+#name, #message{
+  padding: 3%;
+  width: 94%;
+}
+
+/* Contact section */
+.contacte {
+  display: flex; 
+  flex-direction: column; 
+  /*flex-wrap: wrap;*/
+  margin-left: 30px;
+  width: 35%;
+  justify-content: flex-start;
+}
+
+.numtel{
+  font-size: 30px;
+}
+
+.numtel, .email, .adress {
+  margin-bottom: 20px; 
+  padding: 0;
+}
+
+.numtel p, .email p, .adress p {
+  margin: 5px 0; 
+}
+
+.icon {
+  display: flex; 
+  gap: 10px; 
+}
+
+.icon img {
+  width: 30px; 
+  height: 30px; 
+  cursor: pointer;
+  /*background-color: #2f2e2e;*/
+}
+
+.icon img:alt {
+  content: 'Image not found'; 
+}
+
+
+/* Pour la largeur du formulaire sur mobile */
+@media screen and (max-width: 620px) {
+  .fin {
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%;
+      margin-left: 0;
+  }
+
+  .form{
+    flex-direction: column; 
+      align-items: center; 
+  }
+
+  .formulaire {
+      width: 90%; 
+      padding: 3%;
+  }
+
+  .contacte{
+    text-align: center;
+  }
+
+  .contacte {
+      width: 100%; 
+      align-items: center; 
+      margin-left: 0;
+  }
+
+
+}
+
