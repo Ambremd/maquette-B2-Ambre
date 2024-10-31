@@ -478,6 +478,14 @@ button:hover {
   margin: 5px 0; 
 }
 
+.numtel a, .email a, .adress a {
+  color: white;
+}
+
+.numtel a:hover, .email a:hover, .adress a:hover {
+  color: #c59f4c;
+}
+
 .icon {
   display: flex; 
   gap: 10px; 
@@ -524,9 +532,3 @@ button:hover {
   }
 }
 
-/* Assurer un empilement vertical sur les petits écrans */
-@media screen and (max-width: 800px) {
-  .image-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
