@@ -1,0 +1,433 @@
+/* Définition des variables de couleurs */
+@noir: #000000;
+@blanc: #ffffff;
+@gris: #A5A4A4;
+@or: #d1a559;
+@gris-foncé: #333333;
+@gris-clair: #5f5e5e;
+@antiquewhite: antiquewhite;
+@rose: #e0c48c;
+@gris-défault: #232323;
+
+/* Importation des polices */
+@font-face {
+  font-family: "RobotoB";
+  src: url("./fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RobotoL";
+  src: url("./fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RobotoR";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+/* Styles globaux */
+body {
+  font-family: RobotoR;
+  margin: 0;
+  background-color: @noir;
+  color: @blanc;
+}
+
+h1, h2, h3, h4 {
+  font-family: "RobotoB";
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+/* Section Header */
+.header {
+  display: flex;
+  height: 100vh;
+  max-height: 1000px;
+  background: url('./img/MaisonScandinave.jpeg') no-repeat center center / cover;
+}
+
+/* Section Navigation */
+.containernav {
+  width: 10%;
+  background-color: @noir;
+  padding: 20px 0;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu Burger */
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  z-index: 100;
+  color: @blanc;
+  position: sticky;
+  top: 10px;
+  left: 2%;
+  
+  &:after {
+    content: "☰";
+    top: 0;
+    left: 0;
+  }
+}
+
+#menu-toggle {
+  display: none;
+  
+  &:checked + label#menu-icon:after {
+    content: "✖";
+  }
+}
+
+/* Liens du menu */
+.linknav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: darken(@gris-foncé, 10%);
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  z-index: 1;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  
+  li {
+    padding: 20px;
+    text-align: left;
+    color: @blanc;
+    width: 50%;
+    
+    a {
+      color: @blanc;
+    }
+    
+    &:hover {
+      background-color: @gris-clair;
+      cursor: pointer;
+    }
+  }
+}
+
+#menu-toggle:checked + label + .linknav {
+  left: 0;
+}
+
+/* Liens sociaux */
+.reseaux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-top: 30%;
+    padding: 0;
+    
+    li a {
+      color: @gris;
+      padding: 15px 0;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      cursor: pointer;
+      text-decoration: none;
+      
+      &:hover {
+        color: @blanc;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Section Langue */
+.langue {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  
+  p {
+    margin: 0 10px;
+    color: @gris;
+    
+    &:hover {
+      color: @blanc;
+    }
+  }
+}
+
+/* Section Hero */
+.hero {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  h1 {
+    font-size: 25px; /* Correction : doublon de font-size */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    
+    a {
+      color: @blanc;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 5%;
+  width: 95%;
+  
+  h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 5px;
+  }
+}
+
+/* Bouton Voir Plus */
+.boutonplus {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: @or;
+  color: @blanc;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  
+  &:hover {
+    background-color: @rose;
+    color: darken(@gris-foncé, 10%);
+  }
+}
+
+/* Section Barre Basse */
+.barrebasse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @noir;
+  height: 10%;
+  padding: 0;
+  width: 100%;
+  color: @gris;
+  margin-top: 30vh;
+  
+  &:hover {
+    color: @blanc;
+  }
+}
+
+/* Section Coordonnées */
+.coordonee {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  cursor: pointer;
+  padding-left: 3%;
+  font-size: 12px;
+  
+  p a {
+    margin-right: 20px;
+    color: @gris;
+    
+    &:hover {
+      color: @blanc;
+    }
+  }
+}
+
+/* Section Défilement */
+.defilement {
+  display: flex;
+  align-items: center;
+  padding-right: 3%;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: @gris;
+}
+
+/* Compteur de Page */
+.counter {
+  margin-left: 10px;
+  color: @gris;
+}
+
+.un {
+  font-size: 20px;
+}
+
+/* Section Information */
+.information {
+  height: fit-content;
+  width: 90%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Partie Gauche ou Haut (Texte et Lien) */
+.bloc1 {
+  width: 43%;
+  box-sizing: border-box;
+  height: auto;
+  margin: 3%;
+  
+  .chiffre {
+    color: @or;
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  
+  .apropos {
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  
+  #apropos {
+    color: @gris-défault;
+    font-size: 54px;
+    position: relative;
+    z-index: -1;
+    top: -40px;
+    left: 30px;
+    margin: 0;
+    margin-bottom: 3%;
+  }
+  
+  .text {
+    width: 90%;
+    margin: -5% 5% 10% 5%;
+    font-size: 1.2rem;
+  }
+  
+  .presentation {
+    color: @antiquewhite;
+    
+    &:hover {
+      color: @or;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Partie Droite (Vidéo) */
+.bloc2 {
+  width: 44%;
+  height: auto;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  
+  .interieur {
+    margin: auto;
+    padding: 20px 4px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Design Réactif */
+@media screen and (max-width: 1000px) {
+  .chiffre, .apropos {
+    font-size: 1.4em;
+  }
+  
+  .text {
+    font-size: 1em;
+  }
+  
+  #apropos {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .information {
+    height: auto;
+    width: 100%;
+    max-height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
+  
+  .bloc1, .bloc2 {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    max-height: 500px;
+  }
+  
+  .intro h2 {
+    font-size: 1.0rem;
+  }
+  
+  .boutonplus {
+    padding: 4px 10px;
+    font-size: 0.6rem;
+    border-radius: 10px;
+  }
+  
+  .reseaux ul li {
+    font-size: 12px;
+  }
+  
+  .langue {
+    font-size: 12px;
+  }
+  
+  .un {
+    font-size: 16px;
+  }
+}
