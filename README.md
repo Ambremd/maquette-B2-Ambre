@@ -14,7 +14,7 @@ Ce projet a été réalisé dans le cadre d'un cours d'intégration web en deuxi
 ---
 
 ## 🚀 Technologies utilisées  
- <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+ <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/LESS-1D365D?style=for-the-badge&logo=less&logoColor=white" alt="LESS" />
 
 ---
 
